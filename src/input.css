@@ -95,14 +95,131 @@
         @apply py-10
     }
     .about__wrapper{
-        @apply justify-center items-center pt-10;
+        @apply justify-center items-center pt-10
+        /* desktop */
+        lg:flex lg:mt-10;
     }
     .about__video iframe{
-        @apply max-w-[23rem] items-center justify-center text-center h-80 pt-20;
+        @apply max-w-[23rem] items-center justify-center text-center h-80 pt-20 mx-auto
+        /* desktop */
+        lg:max-w-[50rem] lg:max-h-[30rem];
     }
     .about__title h2{
         @apply text-primary font-extrabold text-5xl pt-3;
     }
+
+    /* Our Story */
+    .story{
+        @apply py-10;
+    }
+    .story h3{
+        @apply  font-bold text-center text-4xl mb-5;
+    }
+    .story__content{
+        @apply text-justify;
+    }
+    .story__item{
+        @apply mb-5 max-w-[35rem] mx-auto;
+    }
+    .story__item h4, 
+    .story__item i{
+        @apply bg-primary text-white px-3 py-2 font-bold
+        flex justify-between items-center cursor-pointer;
+    }
+    .story__item i.open {
+        @apply rotate-180 duration-700;
+    }
+    .story__item p{
+        @apply bg-slate-50 h-auto max-h-0 overflow-hidden  duration-300;
+    }
+    .story__item p.open{
+        @apply max-h-[50rem] bg-slate-50 p-3 duration-300;
+    }
+
+    /* clients review */
+    .reviews {
+        @apply p-10;
+    }
+    .reviews__title h2{
+        @apply font-bold text-2xl text-center;
+    }
+    .reviews__wrapper{
+        @apply justify-center text-center  items-center mt-5;
+    }
+    .slider__image img{
+        @apply max-w-[6rem] border border-transparent rounded-full mx-auto;
+    }
+    .slider__image h4{
+        @apply text-xl mt-4;
+    }
+
+    /* Menu Banner */
+    .menuBanner {
+        @apply py-10 bg-cover h-screen;    
+    }
+
+    .menuBanner__title h2{
+        @apply text-3xl font-extrabold mt-96 ml-28 text-white
+    }
+
+    /* order menu */
+    .menuFood {
+        @apply py-10 bg-terttiary;
+    }
+    .menuFood__tab ul{
+        @apply flex gap-3 border-y-8 border-secondary rounded-xl bg-secondary max-w-[25rem] mx-auto font-bold justify-between;
+    }
+    .menuFood__tab a{
+        @apply justify-center  text-center items-center
+    }
+    .menu__details--wrap{
+        @apply grid grid-cols-3 gap-3;
+    }
+    .menu__foods{
+        @apply flex flex-col gap-2 justify-center items-center
+        text-center py-10;
+    }
+    .menu__foods img{
+        @apply w-28;
+    }
+    .menu__details {
+        @apply hidden;
+    }
+
+    .menu__details.active{
+        @apply block;
+    }
+    .menuFood__tab li{
+        @apply  cursor-pointer;
+    }
+
+    /* contact Map */
+    .contactMap {
+        @apply py-10;
+    }
+    .contactMap__wrapper iframe{
+        @apply w-[29.5rem] h-screen;
+    }
+    .contactForm {
+        @apply py-10;
+    }
+    .contactForm__title h2{
+        @apply font-extrabold text-3xl text-center mb-2;
+    }
+
+    .form__split ul{
+        @apply flex gap-2;
+    }
+    .contactForm__info input{
+        @apply border border-transparent rounded-xl mt-2 max-w-[40rem];
+    }
+    .contactForm__info li{
+        @apply max-w-[50rem]
+    }
+    .forms li{
+        @apply w-52
+    }
+
 }
 
 @layer components{
